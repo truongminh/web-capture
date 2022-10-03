@@ -23,9 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libatk-bridge2.0-0 \
     libepoxy0 \
     libgtk-3-0 \
-    libharfbuzz-icu0
-
-RUN apt-get update && apt-get install -y --no-install-recommends \
+    libharfbuzz-icu0 \
     libnss3 \
     libxss1 \
     libasound2 \
