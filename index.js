@@ -9,7 +9,9 @@ const { URL } = require('url');
  */
 async function render(params) {
     const { url, width, height } = params;
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
     const page = (await browser.pages())[0];
     await page.setViewport({ width, height });
     await page.goto(url);
